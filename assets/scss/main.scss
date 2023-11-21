@@ -1,0 +1,15 @@
+@import "normCSS";
+
+
+body {
+  background: $white;
+}
+
+.controller_open-space {
+  color: $green_light;
+  cursor: pointer;
+}
+
+.controller_open-space:hover {
+  opacity: 0.8;
+}
