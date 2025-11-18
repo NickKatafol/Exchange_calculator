@@ -1,24 +1,3 @@
-<template>
-  <div class="selected-input-wrapper">
-    <input type="text"
-           v-model="inputVal"
-           :placeholder=placeholder
-    >
-    <div @click="onItemChoice"
-         class="drop-zona"
-    >
-      <div v-for="(itemName, ind) of filteredItemNames"
-           :key="ind"
-           :data-chosen-item-name="itemName"
-           class="drop-zona__item"
-      >
-        {{ itemName }}
-      </div>
-    </div>
-  </div>
-
-</template>
-
 <script setup lang="ts">
 const { itemNames, placeholder } = defineProps<{
   itemNames: string[]
@@ -43,6 +22,27 @@ function onItemChoice(ev: any) {
 }
 
 </script>
+
+<template>
+  <div class="selected-input-wrapper">
+    <input type="text"
+           v-model="inputVal"
+           :placeholder=placeholder
+    >
+    <div @click="onItemChoice"
+         class="drop-zona"
+    >
+      <div v-for="(itemName, ind) of filteredItemNames"
+           :key="ind"
+           :data-chosen-item-name="itemName"
+           class="drop-zona__item"
+      >
+        {{ itemName }}
+      </div>
+    </div>
+  </div>
+
+</template>
 
 <style scoped lang="scss">
 .selected-input-wrapper {

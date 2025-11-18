@@ -1,3 +1,8 @@
+<script setup lang="ts">
+  useRouter().push('/about')
+
+</script>
+
 <template>
   <div class='exchange-wrapper'>
     <header @click="useRouter().push('/about')" 
@@ -10,11 +15,6 @@
 
   </div>
 </template>
-
-<script setup lang="ts">
-  useRouter().push('/about')
-
-</script>
 
 <style scoped lang="scss">
 .exchange-wrapper {

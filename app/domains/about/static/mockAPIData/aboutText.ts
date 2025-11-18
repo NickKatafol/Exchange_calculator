@@ -6,7 +6,7 @@ Implementing the exchange calculator.
 <span style="color: rgb(177, 114, 193);">
   \# TECHNOLOGY:
 </span>
-- Nuxt.js 3
+- Nuxt.js 4
 - TypeScript
 - Domain Driven Design
 - Test Driven Design

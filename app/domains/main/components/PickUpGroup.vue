@@ -1,30 +1,3 @@
-<template>
-  <div class="pick-up-input-wrapper">
-    <div class="pick-up__title">
-      {{ props.options.title }}
-    </div>
-
-    <div class="pick-up__body">
-      <input v-model="inputAmount" 
-            :placeholder="props.options.placeholder" 
-            @click="whereFocusIs" 
-      />
-
-      <div class="body__unit-btn">
-        {{ props.unitType }}
-      </div>
-
-
-      <Main_FilteredSelect :itemNames="props.unitTypes" 
-                           placeholder="Filter" 
-                           @selectedItem="chosenItemHandler"
-                           class="body__filtered-select" 
-                           :class="{ 'drop-zona-hidden': isDropZonaHidden }" 
-      />
-    </div>
-  </div>
-</template> 
-
 <script setup lang="ts">
 const props = defineProps<{
   unitTypes: string[]
@@ -82,6 +55,33 @@ function chosenItemHandler(selectedItem: string): void {
 
 
 </script>
+
+<template>
+  <div class="pick-up-input-wrapper">
+    <div class="pick-up__title">
+      {{ props.options.title }}
+    </div>
+
+    <div class="pick-up__body">
+      <input v-model="inputAmount" 
+            :placeholder="props.options.placeholder" 
+            @click="whereFocusIs" 
+      />
+
+      <div class="body__unit-btn">
+        {{ props.unitType }}
+      </div>
+
+
+      <Main_FilteredSelect :itemNames="props.unitTypes" 
+                           placeholder="Filter" 
+                           @selectedItem="chosenItemHandler"
+                           class="body__filtered-select" 
+                           :class="{ 'drop-zona-hidden': isDropZonaHidden }" 
+      />
+    </div>
+  </div>
+</template> 
 
 <style scoped lang="scss">
 .pick-up-input-wrapper {

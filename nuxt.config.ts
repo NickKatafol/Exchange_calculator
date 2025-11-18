@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  css: ['~/assets/scss/main.scss'],
+  modules: ['@nuxt/test-utils'],
+  css: [
+    '~/assets/scss/main.scss', 
+  ],
   vite: {
     css: {
       preprocessorOptions: {
@@ -9,10 +13,9 @@ export default defineNuxtConfig({
           additionalData: `@import "@/assets/scss/utils.scss"; 
                            @import "@/assets/scss/constants.scss";
                            `
-        }
-      }
-    }
+        },
+      },
+    },
   },
-  modules: ['@pinia/nuxt'],
-  extends: ['./domains/main', './domains/about']
+  extends: ['./app/domains/main', './app/domains/about']
 })

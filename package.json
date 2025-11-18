@@ -1,28 +1,21 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "ex_calc",
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --port 3000",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "test:unit": "vitest"
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@vitejs/plugin-vue": "^4.5.0",
-    "@vue/test-utils": "^2.4.2",
-    "jsdom": "^22.1.0",
-    "nuxt": "^3.8.0",
-    "vitest": "^0.34.6",
-    "vue": "^3.3.7",
-    "vue-router": "^4.2.5"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.5.1",
-    "pinia": "^2.1.7",
-    "sass": "^1.69.5"
+    "@nuxt/test-utils": "^3.20.1",
+    "nuxt": "^4.2.1",
+    "vue": "^3.5.24",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "sass": "^1.94.0"
   }
 }
